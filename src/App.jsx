@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 
-   function bigFunction() {
+   function largeFunction() {
            console.log("Calling some value...");
           return "some value...";
       //console.log("React Hook ...");
@@ -11,14 +11,14 @@ export default function App() {
       const [ count, setCount ] = useState(0);
            
            const value = useMemo( () => {
-             return bigFunction();
+             return largeFunction();
            }, [] )
 
         useEffect( () => {
-           bigFunction();
+           largeFunction();
         }, [] )
 
-              //bigFunction();
+              //largeFunction();
 
            //console.log("React Hook ..."); /** run every time */
 
@@ -31,7 +31,7 @@ export default function App() {
            <br /><br /><br />
 
            <span>{value}</span>
-           
+
          </div>
               
 }
